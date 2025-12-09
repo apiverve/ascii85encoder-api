@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/ascii85encoder",
+  "version": "1.1.12",
+  "description": "ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also known as Base85) encoding. It supports both standard and btoa formats for efficient binary-to-text encoding with better compression than Base64.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/ascii85encoder-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "ascii85", "base85", "encoding", "decoding", "data encoding"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/ascii85encoder-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/ascii85encoder?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}

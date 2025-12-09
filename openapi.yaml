@@ -1,0 +1,86 @@
+openapi: 3.0.4
+info:
+  title: ASCII85 Encoder
+  description: ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also known as Base85) encoding. It supports both standard and btoa formats for efficient binary-to-text encoding with better compression than Base64.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/ascii85encoder:
+    get:
+      summary: Encode/Decode ASCII85
+      description: ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also known as Base85) encoding. It supports both standard and btoa formats for efficient binary-to-text encoding with better compression than Base64.
+      operationId: ascii85encoder
+      parameters:
+      - name: text
+        in: query
+        schema:
+          type: string
+        required: true
+        description: Text to encode or decode
+        example: Hello World
+      - name: action
+        default: encode
+        in: query
+        schema:
+          type: string
+        required: false
+        description: 'Action to perform: encode or decode (default: encode)'
+        example: encode
+      - name: format
+        default: standard
+        in: query
+        schema:
+          type: string
+        required: false
+        description: 'Format: standard or btoa (Adobe format with <~ ~> delimiters, default: standard)'
+        example: standard
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  original_text: Hello World
+                  encoded: 87cURD]i,"Ebo7
+                  format: standard
+                  original_length: 11
+                  encoded_length: 14
+                  compression_ratio: 127.27%
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []

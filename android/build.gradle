@@ -1,0 +1,55 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.apiverve'
+version = '1.1.12'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation 'org.json:json:20231013'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.apiverve'
+            artifactId = 'ascii85encoder-api'
+            version = '1.1.12'
+
+            from components.java
+
+            pom {
+                name = 'ASCII85 Encoder'
+                description = 'ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also known as Base85) encoding. It supports both standard and btoa formats for efficient binary-to-text encoding with better compression than Base64.'
+                url = 'https://apiverve.com'
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'apiverve'
+                        name = 'APIVerve'
+                        email = 'hello@apiverve.com'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:git://github.com/apiverve/ascii85encoder-api.git'
+                    developerConnection = 'scm:git:ssh://github.com/apiverve/ascii85encoder-api.git'
+                    url = 'https://github.com/apiverve/ascii85encoder-api'
+                }
+            }
+        }
+    }
+}

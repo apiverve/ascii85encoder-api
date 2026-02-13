@@ -1,48 +1,49 @@
 openapi: 3.0.4
 info:
   title: ASCII85 Encoder
-  description: ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also known as Base85) encoding. It supports both standard and btoa formats for efficient binary-to-text encoding with better compression than Base64.
+  description: >-
+    ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also
+    known as Base85) encoding. It supports both standard and btoa formats for
+    efficient binary-to-text encoding with better compression than Base64.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/ascii85encoder:
     get:
-      summary: Encode/Decode ASCII85
-      description: ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also known as Base85) encoding. It supports both standard and btoa formats for efficient binary-to-text encoding with better compression than Base64.
+      summary: Encode to ASCII85
+      description: Encode text using ASCII85 (Base85) encoding
       operationId: ascii85encoder
       parameters:
-      - name: text
-        in: query
-        schema:
-          type: string
-        required: true
-        description: Text to encode or decode
-        example: Hello World
-      - name: action
-        default: encode
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Action to perform: encode or decode (default: encode)'
-        example: encode
-      - name: format
-        default: standard
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Format: standard or btoa (Adobe format with <~ ~> delimiters, default: standard)'
-        example: standard
+        - name: text
+          in: query
+          schema:
+            type: string
+          required: true
+          description: Text to encode
+          example: Hello World
+        - name: action
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Action to perform
+          example: encode
+        - name: format
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Output format
+          example: standard
       responses:
         '200':
           description: Successful Response
@@ -58,11 +59,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   original_text: Hello World
                   encoded: 87cURD]i,"Ebo7
@@ -75,7 +76,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -83,4 +84,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []

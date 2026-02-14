@@ -11,22 +11,19 @@ namespace APIVerve.API.ASCII85Encoder
     public class ASCII85EncoderQueryOptions
     {
         /// <summary>
-        /// Text to encode or decode
-        /// Example: Hello World
+        /// Text to encode
         /// </summary>
         [JsonProperty("text")]
         public string Text { get; set; }
 
         /// <summary>
-        /// Action to perform: encode or decode (default: encode)
-        /// Example: encode
+        /// Action to perform
         /// </summary>
         [JsonProperty("action")]
         public string Action { get; set; }
 
         /// <summary>
-        /// Format: standard or btoa (Adobe format with <~ ~> delimiters, default: standard)
-        /// Example: standard
+        /// Output format
         /// </summary>
         [JsonProperty("format")]
         public string Format { get; set; }

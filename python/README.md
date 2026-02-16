@@ -44,7 +44,11 @@ from apiverve_ascii85encoder.apiClient import Ascii85encoderAPIClient
 # Initialize the client with your APIVerve API key
 api = Ascii85encoderAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "action": "encode", "format": "standard" }
+query = {
+    "text": "Hello World",
+    "action": "encode",
+    "format": "standard"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text": "Hello World", "action": "encode", "format": "standard" }
+query = {
+    "text": "Hello World",
+    "action": "encode",
+    "format": "standard"
+}
 ```
 
 ###### Simple Request
@@ -125,7 +133,11 @@ from apiverve_ascii85encoder.apiClient import Ascii85encoderAPIClient, Ascii85en
 
 api = Ascii85encoderAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "action": "encode", "format": "standard" }
+query = {
+    "text": "Hello World",
+    "action": "encode",
+    "format": "standard"
+}
 
 try:
     result = api.execute(query)
@@ -146,7 +158,11 @@ from apiverve_ascii85encoder.apiClient import Ascii85encoderAPIClient, Ascii85en
 
 api = Ascii85encoderAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "action": "encode", "format": "standard" }
+query = {
+    "text": "Hello World",
+    "action": "encode",
+    "format": "standard"
+}
 
 try:
     result = api.execute(query)
@@ -180,7 +196,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_ascii85encoder.apiClient import Ascii85encoderAPIClient, Ascii85encoderAPIClientError
 
-query = { "text": "Hello World", "action": "encode", "format": "standard" }
+query = {
+    "text": "Hello World",
+    "action": "encode",
+    "format": "standard"
+}
 
 # Using context manager ensures proper cleanup
 with Ascii85encoderAPIClient("[YOUR_API_KEY]") as api:
@@ -206,7 +226,11 @@ from apiverve_ascii85encoder.apiClient import Ascii85encoderAPIClient
 # Enable debug mode
 api = Ascii85encoderAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text": "Hello World", "action": "encode", "format": "standard" }
+query = {
+    "text": "Hello World",
+    "action": "encode",
+    "format": "standard"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -221,8 +245,13 @@ from apiverve_ascii85encoder.apiClient import Ascii85encoderAPIClient
 
 api = Ascii85encoderAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text": "Hello World",
+    "action": "encode",
+    "format": "standard"
+}
+
 try:
-    query = { "text": "Hello World", "action": "encode", "format": "standard" }
     result = api.execute(query)
     print(result)
 finally:

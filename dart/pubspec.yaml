@@ -1,6 +1,6 @@
 name: apiverve_ascii85encoder
 description: ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also known as Base85) encoding. It supports both standard and btoa formats for efficient binary-to-text encoding with better compression than Base64.
-version: 1.1.13
+version: 1.1.14
 homepage: https://apiverve.com/marketplace/ascii85encoder?utm_source=dart&utm_medium=homepage
 repository: https://github.com/apiverve/ascii85encoder-api/tree/main/dart
 

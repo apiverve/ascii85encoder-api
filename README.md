@@ -30,7 +30,12 @@ The ASCII85 Encoder API provides a simple, reliable way to integrate ascii85 enc
 ```javascript
 async function callASCII85EncoderAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/ascii85encoder', {
+        const params = new URLSearchParams({
+            text: 'Hello World',
+            action: 'encode'
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/ascii85encoder?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +55,7 @@ callASCII85EncoderAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/ascii85encoder?param=value" \
+curl -X GET "https://api.apiverve.com/v1/ascii85encoder?text=Hello%20World&action=encode" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +155,7 @@ go get github.com/apiverve/ascii85encoder-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +174,7 @@ go get github.com/apiverve/ascii85encoder-api/go
 The ASCII85 Encoder API is commonly used for:
 
 - **Web Applications** - Add ascii85 encoder features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with ascii85 encoder capabilities
 - **Data Pipelines** - Process and analyze data at scale

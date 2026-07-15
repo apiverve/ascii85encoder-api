@@ -12,8 +12,13 @@ public class BasicExample {
         ASCII85EncoderAPIClient client = new ASCII85EncoderAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Query parameters
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;text&quot;, &quot;Hello World&quot;);
+        parameters.put(&quot;action&quot;, &quot;encode&quot;);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {

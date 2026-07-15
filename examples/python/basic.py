@@ -17,11 +17,14 @@ def call_ascii85encoder_api():
     Make a GET request to the ASCII85 Encoder API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;text&#x27;: &#x27;Hello World&#x27;, &#x27;action&#x27;: &#x27;encode&#x27;}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()

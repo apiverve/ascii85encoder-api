@@ -25,6 +25,9 @@ namespace APIVerve.API.ASCII85Encoder
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -39,12 +42,24 @@ namespace APIVerve.API.ASCII85Encoder
         public string Format { get; set; }
 
         [JsonProperty("original_length")]
-        public long OriginalLength { get; set; }
+        public long? OriginalLength { get; set; }
 
         [JsonProperty("encoded_length")]
-        public long EncodedLength { get; set; }
+        public long? EncodedLength { get; set; }
 
         [JsonProperty("compression_ratio")]
         public string CompressionRatio { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }

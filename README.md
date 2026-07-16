@@ -192,11 +192,33 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the ASCII85 Encoder API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "original_text": "Hello World",
+    "encoded": "87cURD]i,\"Ebo7",
+    "format": "standard",
+    "original_length": 11,
+    "encoded_length": 14,
+    "compression_ratio": "127.27%"
+  }
 }
 ```
 

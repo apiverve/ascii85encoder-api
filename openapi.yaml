@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: ASCII85 Encoder
   description: >-
-    ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also
-    known as Base85) encoding. It supports both standard and btoa formats for
-    efficient binary-to-text encoding with better compression than Base64.
+    ASCII85 Encoder encodes text into Base85 strings or decodes existing ASCII85
+    payloads back to plain text. Each request returns the converted output with
+    original and processed character counts, while paid plans add custom formats
+    and compression ratios.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/ascii85encoder:
     get:
-      summary: Encode to ASCII85
+      summary: ASCII85 Encoder
       description: Encode text using ASCII85 (Base85) encoding
       operationId: ascii85encoder
       parameters:

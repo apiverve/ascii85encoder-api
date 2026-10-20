@@ -1,13 +1,10 @@
 # ASCII85 Encoder API
 
-ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also known as Base85) encoding. It supports both standard and btoa formats for efficient binary-to-text encoding with better compression than Base64.
+ASCII85 Encoder encodes text into Base85 strings or decodes existing ASCII85 payloads back to plain text. Each request returns the converted output with original and processed character counts, while paid plans add custom formats and compression ratios.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/ascii85encoder.svg)](https://www.npmjs.com/package/@apiverve/ascii85encoder)
 
-This is a Javascript Wrapper for the [ASCII85 Encoder API](https://apiverve.com/marketplace/ascii85encoder?utm_source=npm&utm_medium=readme)
+This is a JavaScript wrapper for the [ASCII85 Encoder API](https://apiverve.com/marketplace/ascii85encoder?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -28,15 +25,15 @@ yarn add @apiverve/ascii85encoder
 ## Configuration
 
 Before using the ASCII85 Encoder API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=readme)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
 ## Quick Start
 
-[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=readme)
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=referral&utm_content=readme)
 
-The ASCII85 Encoder API documentation is found here: [https://docs.apiverve.com/ref/ascii85encoder](https://docs.apiverve.com/ref/ascii85encoder?utm_source=npm&utm_medium=readme).
+The ASCII85 Encoder API documentation is found here: [https://docs.apiverve.com/ref/ascii85encoder](https://docs.apiverve.com/ref/ascii85encoder?utm_source=npm&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -142,7 +139,7 @@ async function makeRequest() {
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -154,12 +151,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=npm&utm_medium=readme).
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=referral&utm_content=readme) and [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

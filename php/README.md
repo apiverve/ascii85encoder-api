@@ -1,6 +1,6 @@
 # ASCII85 Encoder API - PHP Package
 
-ASCII85 Encoder is a tool for encoding and decoding data using ASCII85 (also known as Base85) encoding. It supports both standard and btoa formats for efficient binary-to-text encoding with better compression than Base64.
+ASCII85 Encoder encodes text into Base85 strings or decodes existing ASCII85 payloads back to plain text. Each request returns the converted output with original and processed character counts, while paid plans add custom formats and compression ratios.
 
 ## Installation
 
@@ -90,11 +90,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/ascii85encoder?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/ascii85encoder?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/ascii85encoder?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/ascii85encoder?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/ascii85encoder?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/ascii85encoder?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License

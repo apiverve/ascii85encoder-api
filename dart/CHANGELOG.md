@@ -1,4 +1,4 @@
-## 1.1.14
+## 1.2.3
 
 - Initial release
 - Full API support for ASCII85 Encoder API

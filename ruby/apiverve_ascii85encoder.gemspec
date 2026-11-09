@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "apiverve_ascii85encoder"
-  spec.version       = "1.2.4"
+  spec.version       = "1.2.5"
   spec.authors       = ["APIVerve"]
   spec.email         = ["hello@apiverve.com"]
 
